@@ -23,6 +23,7 @@
   --main-color: #6195ff;
   --black: #222;
   --gray: #EEE;
+  --dark-gray: #aaa;
   --white: #fff;
 }
 * {
@@ -33,6 +34,7 @@
 
 body {
   font-family: 'Varela Round', sans-serif;
+  min-height: 1500px  ;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: Arial, Helvetica, sans-serif;
@@ -69,13 +71,34 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
-/* Common styles */
+/***** Common styles /*****/
 .hover-opacity{
   transition: opacity .2s;
 }
 
 .hover-opacity:hover{
   opacity: 0.8;
+}
+
+/* section title */
+.section-header{
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+
+.section-header .section-title{
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.section-header span{
+  width: 100px;
+  height: 4px;
+  margin: auto;
+  display: block;
+
+  background-color: var(--main-color);
 }
 
 /**********************************/
@@ -177,6 +200,65 @@ letter-spacing: 2px;
 
 
 /***** About *****/
+.about-section .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-item{
+  text-align: center;
+  position: relative;
+  width: 30%;
+  padding: 2rem 1rem;
+  border: 1px solid var(--dark-gray);
+  border-radius: 4px;
+}
+.about-item:hover .about-item-title{
+  color: var(--white);
+}
+.about-item-img{
+  color: var(--main-color);
+  font-size: 3rem;
+}
+.about-item-title{
+  font-size: 1.5rem;
+  margin-top: 1rem;
+text-transform: capitalize;
+transition: color 0.5s;
+}
+.about-item-desc{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: var(--dark-gray);
+}
+.about-item a{
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+/* about item hover */
+.about-item::after{
+transition: width 0.5s ease;
+content:"";
+display: block;
+position: absolute; 
+z-index: -1;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+width: 0;
+}
+.about-item:hover::after{
+background-color: var(--black);
+width: 100%;
+}
+
+
 /***** portofolio *****/
 /***** services *****/
 /***** prices *****/
