@@ -1,15 +1,45 @@
+/*
+  1- General ruls
+  2- Media query
+  3- Common styles
+  4- Sections styles
+    4.0 header
+    4.1 home section ( showcase )
+    4.2 about section
+    4.3 portofolio section
+    4.4 services section
+    4.5 prices section
+    4.5 team section
+    4.6 blog section
+    4.7 contact section
+    4.8 footer
+
+    Developed by: Mahmoud Dahdouh
+    Github: https://github.com/MahmoudDahdouh
+*/
+
 /* Global rules */
+:root{
+  --main-color: #6195ff;
+  --black: #222;
+  --gray: #EEE;
+  --white: #fff;
+}
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Varela Round', sans-serif;
 }
-/**********************************/
+h1,h2,h3,h4,h5,h6{
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .container{
-  padding: 0 16px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 
@@ -38,11 +68,119 @@ body {
     width: 1200px;
   }
 }
-/**
-Small	sm	≥576px
-Medium	md	≥768px
-Large	lg	≥992px
-Extra large	xl	≥1200px
-Extra extra large	xxl	≥1400px
-*/
 
+/* Common styles */
+.hover-opacity{
+  transition: opacity .2s;
+}
+
+.hover-opacity:hover{
+  opacity: 0.8;
+}
+
+/**********************************/
+
+/***** Header *****/
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+}
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+header .logo{
+  width: 150px;
+}
+/* nav bar */
+nav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav a{
+  height: 56px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--black);
+  padding: 16px;
+  color: var(--white);
+}
+/* (a.active) -> tag a with active class */
+nav a.active::after,
+nav a::after{
+  content: "";
+  width: 0%;
+  margin-top: 2px;
+  height: 2px;
+  display: block;
+  transition: 0.2s;
+  background-color: var(--main-color);
+}
+nav a.active::after{
+width: 100%;
+}
+nav a:hover::after{
+width: 100%;
+}
+
+/***** Home *****/
+
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imgs/background/background1.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-content{
+  color: var(--white);
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+.home-title{
+  margin: 0;
+  font-size: 6rem;
+}
+.home-desc{
+  margin-top: 20px;
+  margin-bottom: 20px;
+font-size: 1.5rem;
+line-height: 1.7;
+letter-spacing: 2px;
+}
+
+.btn{
+  background-color: var(--white);
+  cursor: pointer;
+  min-width: 200px;
+  min-height: 56px;
+  font-size: 1.5rem;
+  border: 0;
+  text-transform: capitalize;
+  border-radius: 4px;
+}
+
+.btn-learn{
+  background-color: var(--main-color);
+  margin-left: 10px;
+  color: var(--white)
+}
+
+
+/***** About *****/
+/***** portofolio *****/
+/***** services *****/
+/***** prices *****/
+/***** team *****/
+/***** blog *****/
+/***** contact *****/
+/***** footer *****/
