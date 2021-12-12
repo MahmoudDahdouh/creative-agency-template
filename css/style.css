@@ -24,6 +24,7 @@
   --black: #222;
   --gray: #EEE;
   --dark-gray: #aaa;
+  --light-gray: #f0f0f0;
   --white: #fff;
 }
 * {
@@ -83,21 +84,20 @@ h1,h2,h3,h4,h5,h6{
 /* section title */
 .section-header{
   text-align: center;
-  margin-top: 8rem;
-  margin-bottom: 2rem;
+  padding-top: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
-.section-header .section-title{
+.section-title{
   font-size: 2rem;
   text-transform: capitalize;
-  margin-bottom: 1rem;
 }
-.section-header span{
+.span-line{
   width: 100px;
   height: 4px;
   margin: auto;
   display: block;
-
   background-color: var(--main-color);
 }
 
@@ -260,6 +260,94 @@ width: 100%;
 
 
 /***** portofolio *****/
+.portofolio-section{
+  background-color: var(--light-gray);
+}
+
+.portofolio-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portofolio-item{
+  width: 33.3333%;
+  padding: 8px;
+  position: relative;
+}
+
+.portofolio-item .layer-content{
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portofolio-item img{
+  width: 100%;
+  height: 100%;
+}
+
+.portofolio-item .layer-content{
+visibility: hidden;
+width:0;
+height: 0;
+opacity: 0;
+transition: height 0.5s, opacity 0.5s;
+}
+
+.portofolio-item .layer-content .category{
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+.portofolio-item .layer-content .layer-title{
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.portofolio-item .layer-content .layer-icons {
+margin-top: 16px;
+}
+.portofolio-item .layer-content .layer-icons i{
+ color: #fff;
+ background-color: var(--main-color);
+ padding: 16px;
+ border-radius: 2px;
+ cursor: pointer;
+}
+
+/*** Hover effect ***/
+.layer-content .layer-icons,
+.layer-content .layer-title,
+.layer-content .category{
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s;
+  transition-delay: .2s;
+}
+
+.layer-content .layer-icons{
+  transition-delay: .3s;
+}
+
+.portofolio-item:hover .layer-content{
+  width:100%;
+  height: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.portofolio-item:hover .category,
+.portofolio-item:hover .layer-icons,
+.portofolio-item:hover .layer-title
+{
+  visibility: visible;
+  opacity: 1;
+}
 /***** services *****/
 /***** prices *****/
 /***** team *****/
