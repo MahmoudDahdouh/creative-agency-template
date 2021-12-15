@@ -40,6 +40,7 @@ body {
 }
 h1,h2,h3,h4,h5,h6{
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
 }
 
 .container{
@@ -85,9 +86,11 @@ h1,h2,h3,h4,h5,h6{
 /* section title */
 .section-header{
   text-align: center;
-  padding-top: 4rem;
-  margin-top: 4rem;
   margin-bottom: 4rem;
+}
+.py-6{
+  padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .section-title{
@@ -171,6 +174,7 @@ width: 100%;
   margin: auto;
 }
 .home-title{
+  color: var(--white);
   margin: 0;
   font-size: 6rem;
 }
@@ -211,7 +215,7 @@ letter-spacing: 2px;
   position: relative;
   width: 30%;
   padding: 2rem 1rem;
-  border: 1px solid var(--dark-gray);
+  border: 1px solid var(--light-gray);
   border-radius: 4px;
 }
 .about-item:hover .about-item-title{
@@ -263,7 +267,6 @@ width: 100%;
 /***** portofolio *****/
 .portofolio-section{
   background-color: var(--light-gray);
-  padding-bottom: 48px;
 }
 
 .portofolio-content{
@@ -366,6 +369,7 @@ margin-top: 16px;
   width: 32%;
   flex-grow: 1;
   border: 1px solid var(--light-gray);
+  border-radius: 4px;
   padding: 24px;
   display: flex;
   justify-content: space-between;
@@ -378,12 +382,62 @@ margin-top: 16px;
   font-size: 48px;
 }
 .offer-item .offer-title{
-
+text-transform: capitalize;
 }
 .offer-item .offer-desc{
   margin-top: 10px;
   line-height: 1.5;
   color: var(--dark-gray)
+}
+/***** why choose us *****/
+.service-section{
+  background-color: var(--light-gray);
+}
+.service-section .container{
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+.service-section .span-line{
+  margin: 0;
+}
+.service-section .service-desc{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+}
+
+.service-section ul i{
+ color: var(--main-color);
+} 
+.service-section .service-content ul li{
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+  list-style-position: inside;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.service-section .service-img ul{
+text-align: center;
+}
+.service-section .service-img ul li{
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+ display: inline-block;
+ background-color: var(--dark-gray);
+ transition: background-color 0.2s;
+}
+.service-section .service-img ul li:hover,
+.service-section .service-img ul li.active{
+  background-color: var(--main-color);
 }
 /***** prices *****/
 /***** team *****/
