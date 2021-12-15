@@ -24,6 +24,7 @@
   --black: #222;
   --gray: #EEE;
   --dark-gray: #aaa;
+  --darker-gray: #707070;
   --light-gray: #f0f0f0;
   --white: #fff;
 }
@@ -470,7 +471,72 @@ color: var(--main-color);
 font-size: 1.5rem;;
 }
 
-/***** team *****/
+/***** pricing *****/
+.pricing-section .container{
+  display: flex;
+  justify-content: space-between;
+gap: .5%;
+}
+
+.pricing-section .pricing-title{
+font-size: 2rem;
+color: var(--darker-gray);
+}
+.pricing-section .pricing-item-card{
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--light-gray);
+  padding: 4rem 4rem;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+/* hover effect */
+.pricing-item-card:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+.pricing-section .pricing-item-time-circle{
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+  margin-top: 1rem;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pricing-cost{
+  font-size: 4rem;
+}
+.pricing-item-month{
+  font-size: 1.5rem;
+}
+
+.pricing-item-desc-list {
+margin-top: 16px;
+}
+.pricing-item-desc-list li{
+  list-style: none;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  color: var(--dark-gray);
+}
+
+.btn-purchase-now{
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  font-size: 1rem;
+  margin-top: 16px;
+  transition: background-color .2s, color 0.3s;
+}
+.btn-purchase-now:hover{
+  color: var(--white);
+  background-color: var(--main-color);
+}
+
 /***** blog *****/
 /***** contact *****/
 /***** footer *****/
