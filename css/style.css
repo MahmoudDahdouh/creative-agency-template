@@ -439,7 +439,37 @@ text-align: center;
 .service-section .service-img ul li.active{
   background-color: var(--main-color);
 }
-/***** prices *****/
+/***** statistics *****/
+.statistics-section{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imgs/background/background2.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.statistics-section .container{
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.statistics-section .statistic-item{
+text-align: center;
+}
+.statistics-section i{
+color: var(--main-color);
+}
+.statistics-section .statistic-number{
+  color: var(--white);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+.statistics-section .statistic-desc{
+font-size: 1.5rem;;
+}
+
 /***** team *****/
 /***** blog *****/
 /***** contact *****/
