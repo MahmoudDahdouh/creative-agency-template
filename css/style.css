@@ -31,6 +31,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -262,6 +263,7 @@ width: 100%;
 /***** portofolio *****/
 .portofolio-section{
   background-color: var(--light-gray);
+  padding-bottom: 48px;
 }
 
 .portofolio-content{
@@ -348,7 +350,41 @@ margin-top: 16px;
   visibility: visible;
   opacity: 1;
 }
-/***** services *****/
+/***** what we offer *****/
+.offer-section{
+
+}
+.offer-section .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2%;
+  row-gap: 24px;
+}
+.offer-item{
+  cursor:default;
+  width: 32%;
+  flex-grow: 1;
+  border: 1px solid var(--light-gray);
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.offer-item i{
+  color:var(--main-color);
+  width: 15%;
+  margin-right: 24px;
+  font-size: 48px;
+}
+.offer-item .offer-title{
+
+}
+.offer-item .offer-desc{
+  margin-top: 10px;
+  line-height: 1.5;
+  color: var(--dark-gray)
+}
 /***** prices *****/
 /***** team *****/
 /***** blog *****/
