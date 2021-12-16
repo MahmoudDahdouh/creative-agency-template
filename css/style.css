@@ -102,6 +102,7 @@ h1,h2,h3,h4,h5,h6{
   width: 100px;
   height: 4px;
   margin: auto;
+  margin-top: 8px;
   display: block;
   background-color: var(--main-color);
 }
@@ -537,6 +538,85 @@ margin-top: 16px;
   background-color: var(--main-color);
 }
 
-/***** blog *****/
-/***** contact *****/
+/***** testimonials *****/
+.testimonials-section{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imgs/background/background3.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.testimonials-section .container{
+  display: flex;
+  gap: 2%;
+}
+
+.testo-head{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.testo-head .testo-person-img{
+  width: 15%;
+}
+.testo-head .testo-person-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.testo-head .testo-person-name{
+  text-transform: capitalize;
+}
+.testo-head .testo-person-name h3{
+  color: var(--white);
+  font-weight: bold;
+  font-size: 2rem;
+}
+.testo-head .testo-person-name p{
+color: var(--main-color);
+margin-top: 8px;
+}
+
+.testo-text{
+  color: var(--white);
+  line-height: 1.4;
+  margin-top: 16px;
+}
+
+/***** our team *****/
+.our-team-section .container{
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+.our-team-section .team-member-card{
+  padding: 4rem 2rem;
+  background-color:var(--light-gray);
+}
+.team-member-name{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.team-member-job{
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin-top: 1rem;
+}
+.team-member-social{
+  text-align: center;
+  margin-top: 16px;
+}
+.team-member-social i{
+  margin: 8px;
+  color: var(--black);
+  transition: color 0.15s;
+  cursor: pointer;
+}
+.team-member-social i:hover{
+  color: var(--main-color);
+}
 /***** footer *****/
