@@ -21,7 +21,7 @@
 /* Global rules */
 :root{
   --main-color: #6195ff;
-  --black: #222;
+  --black: #353535;
   --gray: #EEE;
   --dark-gray: #aaa;
   --darker-gray: #707070;
@@ -32,7 +32,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  user-select: none;
 }
 
 body {
@@ -240,11 +239,10 @@ transition: color 0.5s;
   letter-spacing: 1px;
   color: var(--dark-gray);
 }
-.about-item a{
+.btn-read-more{
   text-decoration: none;
   color: var(--main-color);
   font-size: 1rem;
-  text-transform: capitalize;
 }
 
 /* about item hover */
@@ -594,6 +592,10 @@ margin-top: 8px;
   padding: 4rem 2rem;
   background-color:var(--light-gray);
 }
+.our-team-section .team-member-card  .team-member-img img{
+  width: 100%;
+  height: 100%;
+}
 .team-member-name{
   text-align: center;
   text-transform: capitalize;
@@ -619,4 +621,130 @@ margin-top: 8px;
 .team-member-social i:hover{
   color: var(--main-color);
 }
-/***** footer *****/
+/***** recent-news *****/
+.recent-news{
+  background-color: var(--light-gray);
+  display: block;
+}
+.recent-news .container{
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+.blog-item{
+  background-color: #f5f5f5;
+  width: 32%;
+}
+.recent-news .blog-item-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.blog-item-content{
+  padding: 2rem;
+}
+.blog-item-content .blog-item-content-header i{
+  color: var(--main-color);
+}
+.blog-item-content .blog-item-content-header span{
+margin-right: 1rem;
+margin-left: 0.5rem;
+}
+.blog-item-content .blog-title{
+  margin-top: 2rem;
+}
+.blog-item-content .blog-desc,
+.blog-item-content .btn-read-more{
+  margin-top: 1rem;
+  display: inline-block
+}
+.blog-item-content .blog-desc{
+  line-height: 1.5;
+}
+
+/***** contact *****/
+
+.contact-info{
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+}
+.contact-info .contact-item{
+  text-align: center;
+}
+.contact-info .contact-item i{ color: var(--main-color);}
+.contact-info .contact-item h4{
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+.contact-info .contact-item p{
+  font-size: 1rem;
+  color: var(--dark-gray);
+}
+
+/* contact-form */
+.contact-form .container{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form .container .name-email{
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 1%;
+}
+.contact-form .container .name-email input{
+width: 50%;
+}
+
+
+.contact-form .container input[type="text"],
+.contact-form .container input[type="email"],
+.contact-form .container textarea{
+  background-color: var(--light-gray);
+  border:0;
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  resize: none;
+  border-radius: 4px;
+}
+
+.contact-form .btn-send{
+  margin-top: 1rem;
+  width: 250px;
+  align-self: center;
+}
+
+
+/* Footer */
+.footer-section{
+  background-color: var(--black);
+}
+
+.footer-section ul{
+text-align: center;
+}
+.footer-section ul li{
+ background-color: var(--main-color);
+ border-radius: 4px;
+ display: inline;
+ padding: 1rem;
+ color: var(--white);
+ margin: 4px;
+}
+
+.footer-section .footer-info{
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.footer-section .footer-info span{
+color: var(--main-color);
+}
